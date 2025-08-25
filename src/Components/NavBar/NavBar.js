@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import CartWidget from '../cartwidget';
-import logo from '../../img/logo.png';
+import CartWidget from '../CartWidget/CartWidget';
+import logo from '../../Img/logo.png';
 
 const NavBar = () => {
 
