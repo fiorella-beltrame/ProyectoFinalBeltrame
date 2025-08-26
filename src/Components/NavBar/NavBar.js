@@ -1,6 +1,19 @@
 import React, {useState} from 'react';
 import CartWidget from '../CartWidget/CartWidget';
 import logo from '../../Img/logo.png';
+import { Link } from 'react-router-dom';
+
+const linkContainer = {
+    display: 'flex',
+    gap: '1.5rem',
+};
+
+const linkStyle = {
+    color: 'black',
+    textDecoration: 'none',
+    fontSize: '1.1rem',
+    fontWeight: 'bold',
+};
 
 const NavBar = () => {
 
@@ -14,10 +27,13 @@ const NavBar = () => {
             <div>
                 <img src={logo} alt="Logo de Materia Joyas" style= {{height:'150px' }}></img>
             </div>
-            <div>
-                <a href="#" style={{color: 'inherit', textDecoration: 'none', margin: '0 1rem'}}>Inicio</a>
-                <a href="#" style={{color: 'inherit', textDecoration: 'none', margin: '0 1rem'}}>Productos</a>
-                <a href="#" style={{color: 'inherit', textDecoration: 'none', margin: '0 1rem'}}>Contacto</a>
+            <div style={linkContainer}>
+                <Link to ="/" style={linkStyle}>Inicio</Link>
+                <Link to = "/category/anillos" style={linkStyle}>Anillos</Link>
+                <Link to = "/category/collares" style={linkStyle}>Collares</Link>
+                <Link to = "/category/pulseras" style={linkStyle}>Pulseras</Link>
+                <Link to = "/category/caravanas" style={linkStyle}>Caravanas</Link>
+                <Link to = "/contacto" style={linkStyle}>Contacto</Link>
             </div>
             <CartWidget count = {cartCount} />
             <button onClick={addItemToCart}>Agregar al carrito</button>
