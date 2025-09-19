@@ -6,7 +6,7 @@ const productos = [
   { id: '5', nombre: 'Pulsera de plata', categoria: 'pulseras', descripcion: 'La pulsera Diana tiene toques que la hacen única. Es brillante y muy delicada.' },
   { id: '6', nombre: 'Pulsera de oro', categoria: 'pulseras', descripcion: 'La pulsera Ariel es compatible con cualquier estilo y atuendo.' },
   { id: '7', nombre: 'Caravanas de plata', categoria: 'caravanas', descripcion: 'Las caravanas Nissa son ligeras y brillantes.' },
-  { id: '8', nombre: 'Caravanas de oro', categoria: 'caravanas', descripcion: 'Las caravanas Zubia son una belleza indescriptible, macizas y contundentesgit .' },
+  { id: '8', nombre: 'Caravanas de oro', categoria: 'caravanas', descripcion: 'Las caravanas Zubia son una belleza indescriptible, macizas y contundentes.' },
 ];
 
 export default productos;
