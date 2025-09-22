@@ -16,29 +16,22 @@ const linkStyle = {
 };
 
 const NavBar = () => {
-
-    const [cartCount, setCartCount] = useState (0);
-    const addItemToCart = () => {
-        setCartCount(cartCount+1);
-    }
-
-    return(
-        <nav style={{display: 'flex', justifyContent: 'space-between', padding: '1rem', background: '#eee', alignItems: 'center'}}>
-            <div>
-                <img src={logo} alt="Logo de Materia Joyas" style= {{height:'150px' }}></img>
-            </div>
-            <div style={linkContainer}>
-                <Link to ="/" style={linkStyle}>Inicio</Link>
-                <Link to = "/category/anillos" style={linkStyle}>Anillos</Link>
-                <Link to = "/category/collares" style={linkStyle}>Collares</Link>
-                <Link to = "/category/pulseras" style={linkStyle}>Pulseras</Link>
-                <Link to = "/category/caravanas" style={linkStyle}>Caravanas</Link>
-                <Link to = "/contacto" style={linkStyle}>Contacto</Link>
-            </div>
-            <CartWidget count = {cartCount} />
-            <button onClick={addItemToCart}>Agregar al carrito</button>
-        </nav>
-    );
+  return (
+    <nav style={{ display: 'flex', justifyContent: 'space-between', padding: '1rem', background: '#eee', alignItems: 'center' }}>
+      <div>
+        <img src={logo} alt="Logo de Materia Joyas" style={{ height: '150px' }} />
+      </div>
+      <div style={linkContainer}>
+        <Link to="/" style={linkStyle}>Inicio</Link>
+        <Link to="/category/anillos" style={linkStyle}>Anillos</Link>
+        <Link to="/category/collares" style={linkStyle}>Collares</Link>
+        <Link to="/category/pulseras" style={linkStyle}>Pulseras</Link>
+        <Link to="/category/caravanas" style={linkStyle}>Caravanas</Link>
+        <Link to="/contacto" style={linkStyle}>Contacto</Link>
+      </div>
+      <CartWidget />
+    </nav>
+  );
 };
 
 export default NavBar;

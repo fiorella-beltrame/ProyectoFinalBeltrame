@@ -1,11 +1,15 @@
-import React from  'react';
+import React from 'react';
+import { useCart } from '../Context/CartContext';
+import { Link } from 'react-router-dom';
 
-const CartWidget = ({count}) => {
-    return(
-        <div>
-            🛒<span>{count}</span>
-        </div>
-    );
+const CartWidget = () => {
+  const { totalItems } = useCart();
+
+  return (
+    <Link to="/cart" style={{ textDecoration: 'none', color: 'black' }}>
+      🛒 <span>{totalItems}</span>
+    </Link>
+  );
 };
 
 export default CartWidget;
